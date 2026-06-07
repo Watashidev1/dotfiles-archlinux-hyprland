@@ -1,0 +1,76 @@
+configuration {
+    modi: "drun";
+    show-icons: true;
+    icon-theme: "Papirus";
+    drun-display-format: "{name}";
+    display-drun: "";
+}
+
+* {
+    bg: #181825CC;
+    bg-selected: #89b4fa;
+    fg: #ffffff;  /* Изменили с #cdd6f4 на белый */
+
+    background-color: transparent;
+    text-color: @fg; /* Теперь везде, где используется @fg, будет белый */
+}
+
+window {
+    width: 500px;
+    height: 450px;      /* Жестко заданная высота */
+    location: south;
+    anchor: south;
+    y-offset: -20px;
+    border-radius: 15px;
+    background-color: @bg;
+    padding: 20px;
+}
+
+listview {
+    lines: 10 ;          /* Rofi будет всегда показывать место под 10 строк */
+    fixed-height: true; /* ВАЖНО: это запрещает окну менять размер при фильтрации */
+    spacing: 5px;
+    background-color: transparent;
+}
+
+inputbar {
+    padding: 10px;
+    background-color: #31324466;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+/* Ядерная прозрачность для всех типов элементов */
+element, element normal.normal, element selected.normal, element alternate.normal {
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 8px;
+    spacing: 15px;
+}
+
+element selected {
+    background-color: @bg-selected;
+    text-color: #11111b;
+}
+
+element-text, element-icon {
+    background-color: transparent;
+    text-color: inherit;
+}
+
+/* Скрываем всё лишнее */
+prompt {
+    enabled: false;
+}
+
+/* Скрываем счетчик 15/15 */
+num-filtered-rows, num-rows, textbox-num-sep {
+    enabled: false;
+}
+
+/* Оставляем поле ввода, но делаем его чистым */
+entry {
+    placeholder: "";
+    placeholder-color: transparent;
+    text-color: #ffffff;             /* Чисто белый цвет */
+    background-color: transparent;  /* Убираем фон, чтобы не было квадрата */
+}

@@ -1,0 +1,36 @@
+* {
+    font-family: "JetBrainsMono Nerd Font";
+    font-weight: bold;
+    font-size: 13px;
+    padding: 0;
+    margin: 0;
+}
+
+window#waybar {
+    background: rgba(0, 0, 0, 0); /* Легкая прозрачность фона */
+    border: none;
+}
+
+/* Настройка модулей-капсул */
+#workspaces button, #clock, #cpu, #memory, #mpris, #custom-weather, #custom-power, #window {
+    background: rgba(41, 44, 60, 0.6); /* Темно-синий/серый оттенок */
+    border: 1px solid rgba(187, 154, 247, 0.3); /* Легкая фиолетовая граница */
+    border-radius: 20px; /* Более скругленные углы */
+    padding: 0 15px;
+    margin: 6px 5px; /* Чуть больше отступы для "воздуха" */
+    color: #c0caf5;
+}
+
+/* Активный рабочий стол (акцентный цвет) */
+#workspaces button.active {
+    background: rgba(187, 154, 247, 0.4); /* Фиолетовая заливка */
+    border: 1px solid #bb9af7; /* Яркий фиолетовый контур */
+    color: #ffffff;
+}
+
+/* Эффект при наведении */
+#workspaces button:hover {
+    background: rgba(187, 154, 247, 0.2);
+    box-shadow: none;
+    text-shadow: none;
+}

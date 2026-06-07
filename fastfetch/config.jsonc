@@ -1,0 +1,45 @@
+{
+    "logo": {
+        "source": "/home/watashi/.config/fastfetch/my_logo.txt",
+        "type": "file",
+        "color": {
+            "1": "white"
+        },
+        "width": 35,
+        "height": 15,
+    },
+    "display": {
+        "separator": " : ",
+        "color": "white"
+    },
+    "modules": [
+        {
+            "type": "custom",
+            "format": "┌──────────────────────────────────────────┐"
+        },
+        "os",
+        "kernel",
+        "packages",
+        "display",
+        "terminal",
+        "wm",
+        {
+            "type": "custom",
+            "format": "└──────────────────────────────────────────┘"
+        },
+        {
+            "type": "custom",
+            "format": "┌──────────────────────────────────────────┐"
+        },
+        "cpu",
+        "gpu",
+        "memory",
+        "uptime",
+        "media",
+        "users",
+        {
+            "type": "custom",
+            "format": "└──────────────────────────────────────────┘"
+        }
+    ]
+}
